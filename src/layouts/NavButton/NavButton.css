@@ -7,6 +7,7 @@
     border: 2px greenyellow solid;
     color: greenyellow;
     background-color: #282c34;
+    margin-top: 5px;
 }
 
 .NavButton:active,

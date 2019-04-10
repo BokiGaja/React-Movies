@@ -1,10 +1,10 @@
 import React from 'react'
 import NavButton from './NavButton/NavButton'
-import './Navbar.css'
+import classes from './Navbar.css'
 
 const navbar = () => (
   <header>
-    <nav className="navbar">
+    <nav className={classes.navbar}>
       <NavButton link="/movies">Movies</NavButton>
     </nav>
   </header>
