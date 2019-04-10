@@ -1,0 +1,8 @@
+.movieRow {
+    height: 200px;
+    width: 300px;
+    border: 2px grey solid;
+    border-radius: 20px;
+    text-align: center;
+    margin: 10px auto;
+}

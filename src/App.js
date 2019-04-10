@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Navbar from './layouts/Navbar'
 import {Route, Switch} from "react-router";
-import Movies from './components/Movies/Movies'
+import Movies from './containers/Movies/Movies'
 
 class App extends Component {
   render() {
