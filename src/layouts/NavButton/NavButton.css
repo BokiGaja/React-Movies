@@ -1,0 +1,16 @@
+.NavButton {
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 20px;
+    margin: auto;
+    border: 2px greenyellow solid;
+    color: greenyellow;
+    background-color: #282c34;
+}
+
+.NavButton:active,
+.NavButton:hover {
+    color: #282c34;
+    background-color: greenyellow;
+}
