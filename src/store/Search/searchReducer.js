@@ -1,6 +1,6 @@
 import * as actionTypes from './searchActions'
 
-const initialState = {
+let initialState = {
   searchParams: ''
 };
 

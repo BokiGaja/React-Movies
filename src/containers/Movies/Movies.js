@@ -30,10 +30,11 @@ const movies = props => {
 
   return (
     <div className={classes.moviesList}>
+      {movies.length === 0 && props.searchParams.length === 0 ? <Spinner/> :
+        <div className={classes.selectedMoviesBox}>Number of selected movies: {props.selectedMovies.length}</div>}
       {movies.map((movie, index) => (
         <MovieRow movie={movie} key={index}/>
       ))}
-      {movies.length === 0 && props.searchParams.length ===0 ? <Spinner/> : null}
       {movies.length === 0 && props.searchParams.length > 0 ?
         <div className={classes.errorMessage}>No Movie</div> : null}
     </div>
@@ -42,7 +43,8 @@ const movies = props => {
 
 const mapStateToProps = state => {
   return {
-    searchParams: state.searchParams
+    searchParams: state.search.searchParams,
+    selectedMovies: state.selected.selectedMovies
   }
 };
 

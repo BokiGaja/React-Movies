@@ -1,15 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {BrowserRouter} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.css';
 import {Provider} from 'react-redux'
-import {createStore} from "redux";
-import searchReducer from './store/Search/searchReducer'
+import {createStore} from "redux"
+import {combineReducers} from "redux";
 
-const store = createStore(searchReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+import './index.css';
+import App from './App';
+import searchReducer from './store/Search/searchReducer'
+import selectedReducer from './store/Selected/selectedReducer'
+
+const rootReducer = combineReducers({selected: selectedReducer, search: searchReducer});
+
+const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 const app = (
   <Provider store={store}>

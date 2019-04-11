@@ -10,7 +10,7 @@ const movieSearch = props => (
 
 const mapStateToProps = state => {
   return {
-    currParams: state.searchParams
+    currParams: state.search.searchParams
   }
 };
 
