@@ -10,7 +10,17 @@ const selectedReducer = (state = initialState, action) => {
       return {
         ...state,
         selectedMovies: [...state.selectedMovies, action.id]
-      }
+      };
+    case actionTypes.SELECT_ALL:
+      return {
+        ...state,
+        selectedMovies: [...action.allMovies]
+      };
+    case actionTypes.DESELECT_ALL:
+      return {
+        ...state,
+        selectedMovies: []
+      };
     default:
       return state;
   }

@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1fa667ce-d079-4995-b63d-18e00d39bdcd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/MovieRow/MovieRow.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieRow/MovieRow.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MovieRow/MovieRow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieRow/MovieRow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MovieSearch/MovieSearch.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MovieSearch/MovieSearch.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Movies/Movies.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Movies/Movies.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/Movies/Movies.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Movies/Movies.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/Search/searchReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/Search/searchReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/Selected/selectedActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/Selected/selectedActions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/Selected/selectedReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/Selected/selectedReducer.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/containers/Movies/Movies.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="458">
-              <caret line="31" column="40" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
+            <state relative-caret-position="339">
+              <caret line="37" column="87" selection-start-line="37" selection-start-column="87" selection-end-line="37" selection-end-column="87" />
               <folding>
                 <element signature="e#0#48#0" expanded="true" />
               </folding>
@@ -45,8 +41,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/MovieSearch/MovieSearch.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="306">
+              <caret line="18" column="109" lean-forward="true" selection-start-line="18" selection-start-column="109" selection-end-line="18" selection-end-column="109" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -58,7 +54,7 @@
         <entry file="file://$PROJECT_DIR$/src/store/Selected/selectedActions.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+              <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -66,8 +62,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/store/Selected/selectedReducer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="19" lean-forward="true" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+            <state relative-caret-position="374">
+              <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -133,13 +129,13 @@
         <option value="$PROJECT_DIR$/src/components/Spinner/Spinner.css" />
         <option value="$PROJECT_DIR$/src/components/Spinner/Spinner.js" />
         <option value="$PROJECT_DIR$/src/store/Search/searchReducer.js" />
-        <option value="$PROJECT_DIR$/src/store/Selected/selectedActions.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/components/MovieSearch/MovieSearch.js" />
         <option value="$PROJECT_DIR$/src/components/MovieRow/MovieRow.css" />
-        <option value="$PROJECT_DIR$/src/store/Selected/selectedReducer.js" />
         <option value="$PROJECT_DIR$/src/components/MovieRow/MovieRow.js" />
         <option value="$PROJECT_DIR$/src/containers/Movies/Movies.css" />
+        <option value="$PROJECT_DIR$/src/store/Selected/selectedActions.js" />
+        <option value="$PROJECT_DIR$/src/store/Selected/selectedReducer.js" />
         <option value="$PROJECT_DIR$/src/containers/Movies/Movies.js" />
       </list>
     </option>
@@ -259,18 +255,18 @@
       <option name="presentableId" value="Default" />
       <updated>1554922444000</updated>
       <workItem from="1554922445172" duration="4547000" />
-      <workItem from="1554977661415" duration="6962000" />
+      <workItem from="1554977661415" duration="7511000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11509000" />
+    <option name="totallyTimeSpent" value="12058000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1055" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2772799" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2772799" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -413,34 +409,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/MovieSearch/MovieSearch.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/MovieRow/MovieRow.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/Selected/selectedActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/Selected/selectedReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="19" lean-forward="true" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -461,10 +433,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/Selected/selectedReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/Selected/selectedActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="15" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/MovieSearch/MovieSearch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="109" lean-forward="true" selection-start-line="18" selection-start-column="109" selection-end-line="18" selection-end-column="109" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/containers/Movies/Movies.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="31" column="40" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
+        <state relative-caret-position="339">
+          <caret line="37" column="87" selection-start-line="37" selection-start-column="87" selection-end-line="37" selection-end-column="87" />
           <folding>
             <element signature="e#0#48#0" expanded="true" />
           </folding>

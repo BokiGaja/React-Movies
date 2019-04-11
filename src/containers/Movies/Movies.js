@@ -5,6 +5,7 @@ import {connect} from "react-redux";
 import classes from './Movies.css'
 import Spinner from '../../components/Spinner/Spinner'
 import MovieRow from '../../components/MovieRow/MovieRow'
+import * as actions from '../../store/Selected/selectedActions'
 
 
 const movies = props => {
@@ -31,7 +32,13 @@ const movies = props => {
   return (
     <div className={classes.moviesList}>
       {movies.length === 0 && props.searchParams.length === 0 ? <Spinner/> :
-        <div className={classes.selectedMoviesBox}>Number of selected movies: {props.selectedMovies.length}</div>}
+        <div style={{textAlign: 'center'}}>
+          <div className={classes.selectedMoviesBox}>Number of selected movies: {props.selectedMovies.length}</div>
+          <button className="btn btn-success"
+                  onClick={() => props.onSelectAllMovies(movies.map(movie => movie.id))}>Select All
+          </button>
+          <button className="btn btn-danger" onClick={() => props.onDeselectAllMovies()}>Deselect All</button>
+        </div>}
       {movies.map((movie, index) => (
         <MovieRow movie={movie} key={index}/>
       ))}
@@ -48,4 +55,11 @@ const mapStateToProps = state => {
   }
 };
 
-export default connect(mapStateToProps)(movies);
+const mapDispatchToProps = dispatch => {
+  return {
+    onSelectAllMovies: (allMovies) => dispatch({type: actions.SELECT_ALL, allMovies: allMovies}),
+    onDeselectAllMovies: () => dispatch({type: actions.DESELECT_ALL})
+  }
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(movies);
