@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Navbar from './layouts/Navbar'
-import {Route, Switch} from "react-router";
+import {Route, Switch, Redirect} from "react-router";
 import Movies from './containers/Movies/Movies'
 
 class App extends Component {
@@ -11,6 +11,7 @@ class App extends Component {
         <Navbar/>
         <Switch>
           <Route path="/movies" exact component={Movies}/>
+          <Redirect from="*" to="/movies" />
         </Switch>
       </div>
     );

@@ -6,7 +6,7 @@ import Radium from 'radium'
 const NavButton = Radium(Link);
 
 const navButton = props => (
-  <NavButton to={props.link} style={{margin: 'auto'}}>
+  <NavButton to={props.link} style={{margin: 'auto 10px'}}>
     <button className={classes.NavButton}>{props.children}</button>
   </NavButton>
 );
