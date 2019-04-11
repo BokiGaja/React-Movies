@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Route, Switch, Redirect} from "react-router";
+import {connect} from "react-redux";
 
 import './App.css';
 import Movies from './containers/Movies/Movies'
@@ -15,16 +16,22 @@ class App extends Component {
       <div className="App">
         <Navbar/>
         <Switch>
-          <Route path="/movies/:id" exact component={SingleMovie}/>
+          {this.props.isLogged ? <Route path="/movies/:id" exact component={SingleMovie}/> : null}
           <Route path="/movies" exact component={Movies}/>
-          <Route path="/add" exact component={AddMovie}/>
+          {this.props.isLogged ? <Route path="/add" exact component={AddMovie}/> : null}
           <Route path="/login" exact component={Login}/>
           <Route path="/register" exact component={Register}/>
-          <Redirect from="*" to="/movies" />
+          <Redirect from="*" to="/movies"/>
         </Switch>
       </div>
     );
   }
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    isLogged: state.auth.loggedIn
+  }
+};
+
+export default connect(mapStateToProps)(App);
