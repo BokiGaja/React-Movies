@@ -5,6 +5,7 @@ import './App.css';
 import Movies from './containers/Movies/Movies'
 import Navbar from './layouts/Navbar'
 import AddMovie from './components/AddMovie/AddMovie'
+import Login from './components/Auth/Login/Login'
 
 class App extends Component {
   render() {
@@ -14,6 +15,7 @@ class App extends Component {
         <Switch>
           <Route path="/movies" exact component={Movies}/>
           <Route path="/add" exact component={AddMovie}/>
+          <Route path="/login" exact component={Login}/>
           <Redirect from="*" to="/movies" />
         </Switch>
       </div>

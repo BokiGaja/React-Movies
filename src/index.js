@@ -11,8 +11,9 @@ import './index.css';
 import App from './App';
 import searchReducer from './store/Search/searchReducer'
 import selectedReducer from './store/Selected/selectedReducer'
+import authReducer from './store/Auth/authReducer'
 
-const rootReducer = combineReducers({selected: selectedReducer, search: searchReducer});
+const rootReducer = combineReducers({selected: selectedReducer, search: searchReducer, auth: authReducer});
 
 const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
