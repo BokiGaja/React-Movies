@@ -7,6 +7,7 @@ import Navbar from './layouts/Navbar'
 import AddMovie from './components/AddMovie/AddMovie'
 import Login from './components/Auth/Login/Login'
 import Register from './components/Auth/Register/Register'
+import SingleMovie from './components/SingleMovie/SingleMovie'
 
 class App extends Component {
   render() {
@@ -14,6 +15,7 @@ class App extends Component {
       <div className="App">
         <Navbar/>
         <Switch>
+          <Route path="/movies/:id" exact component={SingleMovie}/>
           <Route path="/movies" exact component={Movies}/>
           <Route path="/add" exact component={AddMovie}/>
           <Route path="/login" exact component={Login}/>

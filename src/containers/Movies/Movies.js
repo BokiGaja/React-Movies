@@ -41,7 +41,7 @@ const movies = props => {
           <button className="btn btn-danger" onClick={() => props.onDeselectAllMovies()}>Deselect All</button>
         </div>}
       {movies.map((movie, index) => (
-        <MovieRow movie={movie} key={index}/>
+        <MovieRow movie={movie} key={index} isSingle={false}/>
       ))}
       {movies.length === 0 && props.searchParams.length > 0 ?
         <div className={classes.errorMessage}>No Movie</div> : null}
