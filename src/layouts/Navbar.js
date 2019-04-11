@@ -19,7 +19,11 @@ const navbar = props => {
         <NavButton link="/movies">Movies</NavButton>
         <MovieSearch/>
         <NavButton link="/add">Add Movie</NavButton>
-        {!props.loggedIn ? <NavButton link="/login">Login</NavButton> :
+        {!props.loggedIn ?
+          <div>
+            <NavButton link="/login">Login</NavButton>
+            <NavButton link="/register">Register</NavButton>
+          </div> :
           <button className={classes.Logout} onClick={logout}>Logout</button>}
       </nav>
     </header>
