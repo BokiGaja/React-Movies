@@ -7,3 +7,20 @@
     height: 50px;
     text-align: center;
 }
+
+.Logout {
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 20px;
+    margin: 0;
+    border: 2px greenyellow solid;
+    color: greenyellow;
+    background-color: #282c34;
+}
+
+.Logout:active,
+.Logout:hover {
+    color: #282c34;
+    background-color: greenyellow;
+}
