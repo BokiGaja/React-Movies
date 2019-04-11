@@ -29,6 +29,7 @@ const movies = props => {
     setMovies([...newState]);
   }, [props.searchParams]);
 
+
   return (
     <div className={classes.moviesList}>
       {movies.length === 0 && props.searchParams.length === 0 ? <Spinner/> :

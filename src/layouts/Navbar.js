@@ -8,6 +8,7 @@ const navbar = () => (
     <nav className={classes.navbar}>
       <NavButton link="/movies">Movies</NavButton>
       <MovieSearch/>
+      <NavButton link="/add">Add Movie</NavButton>
     </nav>
   </header>
 );

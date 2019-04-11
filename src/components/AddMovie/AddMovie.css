@@ -1,0 +1,8 @@
+.addMovieForm {
+    text-align: center;
+    margin: 20px auto;
+    width: 300px;
+    padding: 20px;
+    border: 2px solid greenyellow;
+    border-radius: 20px;
+}
