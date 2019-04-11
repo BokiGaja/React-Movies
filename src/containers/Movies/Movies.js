@@ -1,17 +1,22 @@
 import React, {useState, useEffect} from 'react'
 import {moviesService} from "../../services/Movies"
-import MovieRow from '../../components/MovieRow/MovieRow'
-import classes from './Movies.css'
 import {connect} from "react-redux";
+
+import classes from './Movies.css'
+import Spinner from '../../components/Spinner/Spinner'
+import MovieRow from '../../components/MovieRow/MovieRow'
+
 
 const movies = props => {
   const [initialMovies, setInitialMovies] = useState([]);
   const [movies, setMovies] = useState([]);
   useEffect(() => {
     async function fetchMovies() {
-      const {data} = await moviesService.getAll();
-      setMovies([...data]);
-      setInitialMovies([...data]);
+      setTimeout(async () => {
+        const {data} = await moviesService.getAll();
+        setMovies([...data]);
+        setInitialMovies([...data]);
+      }, 2000);
     }
 
     fetchMovies();
@@ -28,6 +33,7 @@ const movies = props => {
       {movies.map((movie, index) => (
         <MovieRow movie={movie} key={index}/>
       ))}
+      {movies.length === 0 && props.searchParams.length ===0 ? <Spinner/> : null}
       {movies.length === 0 && props.searchParams.length > 0 ?
         <div className={classes.errorMessage}>No Movie</div> : null}
     </div>
