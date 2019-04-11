@@ -12,11 +12,18 @@ const addMovie = props => {
     releaseDate: '',
     imageUrl: ''
   });
+  const [inputError, setInputError] = useState({
+    errorMessage: ''
+  });
 
-  const addNewMovie = event => {
+  const addNewMovie = async (event) => {
     event.preventDefault();
-    moviesService.createMovie({...newMovie});
-    props.history.push('/')
+    const {data} = await moviesService.createMovie({...newMovie});
+    if (data) {
+      setInputError({...inputError, errorMessage: data});
+    } else {
+      props.history.push('/')
+    }
   };
 
   return (
@@ -24,32 +31,35 @@ const addMovie = props => {
       <form onSubmit={addNewMovie} className="form-group">
         <div>
           <input className="form-control" type="text" onChange={e => setNewMovie({...newMovie, title: e.target.value})}
-                 placeholder="Title" required/>
+                 placeholder="Title"/>
         </div>
         <div>
           <input className="form-control" type="text" onChange={e => setNewMovie({...newMovie, genre: e.target.value})}
-                 placeholder="Genre" required/>
+                 placeholder="Genre"/>
         </div>
         <div>
           <input className="form-control" type="text"
-                 onChange={e => setNewMovie({...newMovie, director: e.target.value})} placeholder="Director" required/>
+                 onChange={e => setNewMovie({...newMovie, director: e.target.value})} placeholder="Director"/>
         </div>
         <div>
           <input className="form-control" type="number"
-                 onChange={e => setNewMovie({...newMovie, duration: e.target.value})} placeholder="Duration" required
-                 max="200"/>
+                 onChange={e => setNewMovie({...newMovie, duration: e.target.value})} placeholder="Duration"/>
         </div>
         <div>
           <input className="form-control" type="date"
                  onChange={e => setNewMovie({...newMovie, releaseDate: e.target.value})} placeholder="Release Date"
-                 required/>
+          />
         </div>
         <div>
-          <input className="form-control" type="url"
+          <input className="form-control" type="text"
                  onChange={e => setNewMovie({...newMovie, imageUrl: e.target.value})} placeholder="Image URL"/>
         </div>
         <button type="submit" className="btn btn-primary" style={{marginTop: '20px'}}>Create movie</button>
       </form>
+      {inputError.errorMessage.length > 0 ? <div className="alert alert-danger" role="alert">
+        {inputError.errorMessage}
+      </div> : null}
+
     </div>
   )
 };
